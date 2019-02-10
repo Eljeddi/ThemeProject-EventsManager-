@@ -1,0 +1,208 @@
+/*Webfletcher theme global variables*/
+:root{
+  --primary:#5680F8;
+  --acent:#FE4A9E;
+  --bgcolor:#F4FAFE;
+  --primary-text:#4F4F4F;
+  --secondary-text:#828282;
+  --xlarge:36px;
+  --large:34px;
+  --medium:24px;
+  --small:16px;
+}
+/*Global setting*/
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+/***** Mobile first Design*****/
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  height: 4em;
+  align-items: center;
+}
+.brand{
+  flex-basis: 40%;
+  font-size: var(--medium);
+  font-weight: 600;
+  color: var(--primary-text);
+  text-transform: uppercase;
+}
+.mobile-navbar{
+  background: var(--bgcolor);
+  
+
+}
+.main-menu{
+  list-style-type: none;
+  justify-content: space-between;
+  flex-basis: 40%;
+  display: none;
+}
+.main-menu a{
+  padding:0 5px;
+}
+.main-menu a:hover{
+  border-bottom: 3px solid #FE4A9E;
+}
+.mobile-main-menu{
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-main-menu a{
+  display: inline-block;
+  padding: 100%;
+  padding: 0.5em 0;
+  
+}
+.mobile-main-menu a:hover{
+  border-bottom:3px solid #FE4A9E;
+}
+header a{
+  text-decoration: none;
+  color: var(--secondary-text);
+  font-size: var(--small);
+  font-weight: 300;
+}
+
+.humberger-icon{
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.active{
+  display: flex;
+  flex-direction: column;
+}
+/***END OF NAVBAR***/
+
+/*** SHOWCASE START ***/
+#showcase{
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0;
+  align-items: center;
+  text-align: center;
+  background: url(img/mobile.svg) no-repeat top right;
+
+}
+#title{
+  font-size: var(--xlarge);
+  color: var(--primary-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: var(--large);
+}
+#subtitle{
+  font-size: var(--medium);
+  color: var(--secondary-text);
+  padding-bottom: 3em;;
+}
+.btn{
+  background: var(--primary);
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 19px 30px;
+  border: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.btn:hover{
+  background: #0066FE;
+}
+/****SHOWCASE END****/
+
+/*******SERVICES START*******/
+.services-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 1em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.services-title h1{
+  font-size: var(--large);
+  margin: 1em 0;
+  color: var(--primary-text)
+}
+.services-title p{
+  font-size: var(--medium);
+  text-align: center;
+  color: var(--secondary-text);
+}
+.services-list{
+  background: var(--bgcolor);
+  padding: 2em 0;
+}
+.cards-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  width: 70%;
+  padding: 16px;
+  background: #fff;
+  margin: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card .card-title{
+  font-size: var(--small);
+  color: var(--primary-text);
+  padding: var(--medium);
+}
+.card .card-description{
+  color: var(--secondary-text);
+  padding: var(--medium);
+}
+
+/********** DESKTOP VERSION *********/
+@media screen and (min-width: 700px){
+  #showcase{
+    height: 70vh;
+    background: url(img/bg.svg) no-repeat center;
+    background-size: cover;
+    margin-bottom: 5em
+  }
+  .main-menu{
+    display: flex;
+  }
+  .humberger-icon{
+    display: none;
+  }
+  .mobile-main-menu{
+    display: none;
+  }
+
+  .cards-wrapper{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .card{
+    width: 20%;
+  }
+  .image-wrapper{
+    padding-top: 5em;
+    height: 250px;
+    background: linear-gradient(rgba(20,20,20,0.8),rgba(20,20,20,0.8))  ,url(img/service-img.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .services-list{
+    height: 80vh;
+  }
+
+}
