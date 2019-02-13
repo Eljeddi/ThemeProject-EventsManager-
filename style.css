@@ -170,6 +170,93 @@ header a{
   padding: var(--medium);
 }
 
+/********TESTIMONAILS START***********/
+.testimonials{
+  padding: 10em 0;
+  background: var(--bgcolor);
+  color: var(--secondary-text);
+}
+.testimonials h1{
+  font-size: var(--large);
+  color: var(--primary-text);
+  text-align: center;
+  padding-bottom: 4em;
+}
+.testimonials-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.feedback{
+  text-align: center;
+  padding: 1em;
+}
+.feedback img{
+  border-radius: 50%;
+  text-align:center;
+  padding-bottom: 1em;
+}
+.feedback i{
+  font-size: var(--medium);
+  color: var(--acent);
+  display: block;
+  padding: 1em;
+}
+.feedback blockquote{
+  padding: 1em 2em;
+}
+.feedback footer{
+  font-weight: 600;
+  font-size: small;
+}
+
+/*********Events Start**********/
+.events{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.event-wrapper {
+  text-align: center;
+  padding: 2em;
+  background: linear-gradient(rgba(20,20,20,0.8),rgba(20,20,20,0.8))  ,url(img/service-img.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  flex-basis: 33.33%
+}
+.event-title{
+  font-size: var(--medium);
+  padding: 1em;
+}
+.event-description{
+  font-size: var(--small);
+  padding: 1em;
+}
+.event-place{
+  font-size: var(--small);
+  padding: 1em;
+}
+.event-remaining-time{
+  font-size: var(--medium);
+  padding: 0.5;
+  color: yellow;
+}
+/***********Footer***********/
+.main-footer{
+  height: 50vh;
+  background: black;
+  color: #fff;
+  position: relative;
+
+}
+.copyright{
+  position: absolute;
+  bottom: 1em;
+  left: 20.33%;
+}
+
 /********** DESKTOP VERSION *********/
 @media screen and (min-width: 700px){
   #showcase{
@@ -203,6 +290,15 @@ header a{
   }
   .services-list{
     height: 80vh;
+  }
+  .testimonials-container{
+    flex-direction: row;
+  }
+  .events{
+    flex-direction: row;
+  }
+  .copyright{
+    left: 40%;
   }
 
 }
